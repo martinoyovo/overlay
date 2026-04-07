@@ -1,4 +1,4 @@
-# Overlay (v0)
+# Overlay
 
 A macOS desktop app that lets you select any text from any application and get AI assistance on it instantly: without switching windows, copy-pasting, or breaking your flow.
 
