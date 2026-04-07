@@ -45,7 +45,7 @@ ai_browser_assistant/
 │   │       └── OCRService.ts              # Tesseract + PaddleOCR
 │   └── native-modules/
 │       └── text-selection/               # C++ Node.js addon (Accessibility API)
-├── frontend/         # React UI (popup + settings)
+└── frontend/         # React UI (popup + settings)
    └── src/
        ├── components/
        │   ├── AIPopup/                  # Floating AI panel
