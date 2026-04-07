@@ -46,12 +46,12 @@ ai_browser_assistant/
 │   └── native-modules/
 │       └── text-selection/               # C++ Node.js addon (Accessibility API)
 ├── frontend/         # React UI (popup + settings)
-│   └── src/
-│       ├── components/
-│       │   ├── AIPopup/                  # Floating AI panel
-│       │   └── SettingsComponent/        # Settings page
-│       └── hooks/
-│           └── useChat.ts               # Backend communication
+   └── src/
+       ├── components/
+       │   ├── AIPopup/                  # Floating AI panel
+       │   └── SettingsComponent/        # Settings page
+       └── hooks/
+           └── useChat.ts               # Backend communication
 ```
 
 ---
