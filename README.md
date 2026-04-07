@@ -1,6 +1,6 @@
 # Overlay
 
-A macOS desktop app that lets you select any text from any application and get AI assistance on it instantly — without switching windows, copy-pasting, or breaking your flow.
+A macOS desktop app that lets you select any text from any application and get AI assistance on it instantly: without switching windows, copy-pasting, or breaking your flow.
 
 Hit **⌘⇧A**, and a floating AI panel appears with your selected text already loaded.
 
@@ -8,18 +8,18 @@ Hit **⌘⇧A**, and a floating AI panel appears with your selected text already
 
 ## What it does
 
-- **Capture text from anywhere** — Chrome, Terminal, PDFs, Xcode, Slack, anything
-- **Floating AI popup** — appears where you're working, doesn't take over your screen
-- **Quick actions** — Explain, Summarize, Translate, Improve with one click
-- **Screen region capture** — draw a rectangle to capture any part of your screen and ask the AI about it
-- **OCR** — extract text from screenshots, images, or anything that can't be selected
-- **Conversation context** — the AI remembers the thread within a session
+- **Capture text from anywhere**: Chrome, Terminal, PDFs, Xcode, Slack, anything
+- **Floating AI popup**: appears where you're working, doesn't take over your screen
+- **Quick actions**: Explain, Summarize, Translate, Improve with one click
+- **Screen region capture**: draw a rectangle to capture any part of your screen and ask the AI about it
+- **OCR**: extract text from screenshots, images, or anything that can't be selected
+- **Conversation context**: the AI remembers the thread within a session
 
 ---
 
 ## Requirements
 
-- **macOS** (primary platform — text capture uses macOS Accessibility APIs)
+- **macOS** (primary platform: text capture uses macOS Accessibility APIs)
 - **Node.js** v18 or later
 - **Python 3.8+** (for PaddleOCR; Tesseract works without it)
 - **Xcode Command Line Tools** (to build the native text-selection module)
@@ -38,7 +38,7 @@ ai_browser_assistant/
 ├── desktop/          # Electron main process + services
 │   ├── src/
 │   │   ├── main.ts                        # App entry, shortcuts, IPC, window management
-│   │   ├── preload.ts                     # Context bridge — exposes safe IPC to renderer
+│   │   ├── preload.ts                     # Context bridge: exposes safe IPC to renderer
 │   │   └── services/
 │   │       ├── TextCaptureService.ts      # Adaptive multi-method text capture
 │   │       ├── ScreenCaptureService.ts    # Screenshot + region capture
@@ -98,16 +98,16 @@ Without this, text capture falls back to clipboard-based methods (still works, s
 
 ## Running in development
 
-You need two terminals — one for the backend, one for the desktop app.
+You need two terminals: one for the backend, one for the desktop app.
 
-**Terminal 1 — Backend**
+**Terminal 1: Backend**
 ```bash
 cd backend
 npm run dev
 # Starts Express on http://localhost:3001
 ```
 
-**Terminal 2 — Desktop**
+**Terminal 2: Desktop**
 ```bash
 cd desktop
 npm run dev
@@ -168,15 +168,15 @@ Capturing selected text from another app without the user doing anything is the 
 | 5 | **Enhanced clipboard** | Like standard but clears clipboard first and retries on failure |
 | 6 | **Aggressive clipboard** | Restores app focus first, tries multiple copy key codes with retries |
 
-The adaptive engine tracks success rate, average response time, and recent failure count per method. It re-orders them on every capture attempt — so the fastest method that works in your setup rises to the top automatically.
+The adaptive engine tracks success rate, average response time, and recent failure count per method. It re-orders them on every capture attempt: so the fastest method that works in your setup rises to the top automatically.
 
 ---
 
 ## How OCR works
 
-**`⌘⇧O`** — captures the full screen and runs it through **Tesseract.js** (WebAssembly, no binary dependency).
+**`⌘⇧O`**: captures the full screen and runs it through **Tesseract.js** (WebAssembly, no binary dependency).
 
-**`⌘⇧R`** — lets you drag a rectangle on screen. That region is captured as a PNG and attached directly to the AI popup, so you can ask about an image, diagram, or code snippet that can't be selected as text.
+**`⌘⇧R`**: lets you drag a rectangle on screen. That region is captured as a PNG and attached directly to the AI popup, so you can ask about an image, diagram, or code snippet that can't be selected as text.
 
 For documents with complex layouts, **PaddleOCR** is also supported via a Python subprocess. Configure the engine in `backend/src/services/` settings.
 
@@ -206,8 +206,8 @@ The `context` object passed to `generate` includes the selected text, page URL, 
 
 Open the main window (`⌘⇧M`) to access settings:
 
-- **Allow Multiple AI Popups** — by default only one popup exists at a time; enable this to allow stacking
-- **Keyboard Shortcuts** — reference list of all registered shortcuts
+- **Allow Multiple AI Popups**: by default only one popup exists at a time; enable this to allow stacking
+- **Keyboard Shortcuts**: reference list of all registered shortcuts
 
 ---
 
@@ -241,4 +241,4 @@ Make sure Xcode Command Line Tools are installed: `xcode-select --install`. Then
 Make sure the backend is running on port 3001 before launching the desktop app. The frontend calls `http://localhost:3001/chat`.
 
 **App crashes on launch in dev**
-The Electron process retries connecting to the React dev server on port 3005. Wait a few seconds for the React build to finish — Electron will load automatically once it's ready.
+The Electron process retries connecting to the React dev server on port 3005. Wait a few seconds for the React build to finish: Electron will load automatically once it's ready.
