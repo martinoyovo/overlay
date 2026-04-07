@@ -33,7 +33,7 @@ xcode-select --install
 ## Project structure
 
 ```
-ai_browser_assistant/
+overlay/
 ├── backend/          # Express API server (port 3001)
 ├── desktop/          # Electron main process + services
 │   ├── src/
