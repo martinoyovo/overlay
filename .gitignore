@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+dist/
+*/dist/
+frontend/build/
+desktop/dist-electron/
+backend/dist/
+
+# Native module build artifacts
+desktop/native-modules/text-selection/build/
+desktop/native-modules/text-selection/prebuilds/
+
+# Electron packaged app
+*.dmg
+*.blockmap
+builder-debug.yml
+
+# OS
+.DS_Store
+**/.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# TypeScript cache
+*.tsbuildinfo

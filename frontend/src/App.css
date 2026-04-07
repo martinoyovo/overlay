@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+/* Ensure popup mode has no background */
+.App[data-popup-mode="true"] {
+  background: transparent !important;
+  text-align: left;
+}

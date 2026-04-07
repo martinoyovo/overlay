@@ -1,0 +1,27 @@
+{
+  "name": "text-selection-native",
+  "version": "1.0.0",
+  "description": "Native module for text selection detection",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "install": "node-gyp rebuild",
+    "clean": "node-gyp clean"
+  },
+  "dependencies": {
+    "node-addon-api": "^7.0.0"
+  },
+  "devDependencies": {
+    "node-gyp": "^10.0.0"
+  },
+  "gypfile": true,
+  "keywords": [
+    "native",
+    "addon",
+    "text",
+    "selection",
+    "accessibility"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
