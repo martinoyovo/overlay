@@ -52,8 +52,6 @@ ai_browser_assistant/
 │       │   └── SettingsComponent/        # Settings page
 │       └── hooks/
 │           └── useChat.ts               # Backend communication
-└── scripts/
-    └── audit.js      # Dead code / IPC audit tool
 ```
 
 ---
